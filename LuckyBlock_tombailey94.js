@@ -47,17 +47,17 @@ function destroyBlock(x, y, z, side) {
 			} else if (rnd == 1) { //bow and arrows 
 				Level.dropItem(x,y,z,0,261,1,0);
 				Level.dropItem(x,y,z,0,262,64,0);
-			} else if (rnd == 2) { //leather armour (cap and tunic)
+			} else if (rnd == 2) { //diamond armour (cap and tunic)
 				Level.dropItem(x,y,z,0,298,1,0); 
 				Level.dropItem(x,y,z,0,299,1,0);
-			} else if (rnd == 3) { //leather armour (pants and boots)
+			} else if (rnd == 3) { //diamond armour (pants and boots)
 				Level.dropItem(x,y,z,0,300,1,0);
 				Level.dropItem(x,y,z,0,301,1,0);
 			} else if (rnd == 4) { //iron sword
 				Level.dropItem(x,y,z,0,267,1,0); 
-			} else if (rnd == 5) { //stone sword
+			} else if (rnd == 5) { //diamond sword
 				Level.dropItem(x,y,z,0,272,1,0); 
-			} else if (rnd == 6) { //stone axe
+			} else if (rnd == 6) { //diamond axe
 				Level.dropItem(x,y,z,0,275,1,0);
 			} else if (rnd == 7) { //carrots
 				Level.dropItem(x,y,z,0,391,random(1,6),0); //drop anywhere from 1 to 4 carrots
@@ -87,7 +87,7 @@ function destroyBlock(x, y, z, side) {
 			var playerY = Player.getY();
 			var playerZ = Player.getZ();
 			
-			if (rnd == 0) { //creates a jail type structure (with iron bars) and spawns flowing lava above the player's head
+			if (rnd == 0) { //creates a jail type structure (with iron bars) and spawns flowing water above the player's head
 				
 				var xs = [playerX-1, playerX, playerX+1];
 				var zs = [playerZ-1, playerZ, playerZ+1];
@@ -143,7 +143,7 @@ function destroyBlock(x, y, z, side) {
 							Level.setTile(xs[i], playerY-1, zs[j], 49); //obsidian below eye level
 						}
 
-						Level.setTile(xs[i], playerY+1, zs[j], 49); //obsidian roof
+						Level.setTile(xs[i], playerY+1, zs[j], 49); //stone roof
 						Level.setTile(xs[i], playerY-2, zs[j], 49); //obsidian floor
 					}
 				}
